@@ -54,22 +54,25 @@ for(i=0;i<4;i++){
        ctx.fillStyle = "#191970";
        ctx.font = "bold 40px Arial";
        ctx.fillText(random, dy, dx);
+       setTimeout(function(){
        $("#number").html(" ");
-
+     },500);
           var  indexes = get_all(board,row,column);
+
        if (indexes != 0){
          score =0;
          for (var i=0 ; i< 4;i++){
-              clearTab(indexes[i][1],indexes[i][0]);
               score += board[indexes[i][0]][indexes[i][1]];
               board[indexes[i][0]][indexes[i][1]]=0;
+              clearTab(indexes[i][1],indexes[i][0]);
             }
             total += score;
             var s = "Score: "+total
             $("#score").html(s);
          }
-         setTimeout(getRandomNumber, 500);
+         setTimeout(getRandomNumber,500);
        }
+     });
        if (checkStatus()==false){
          if(!alert('Game Over, You Lost!')){window.location.reload();}
        }
@@ -77,7 +80,7 @@ for(i=0;i<4;i++){
 
 
    });
-});
+
 
  // list of functions used.
    function getTab(x,y){
