@@ -28,7 +28,7 @@ for(i=0;i<4;i++){
      var ver;
      var helper;
      var total=0;
-     var score = 1;
+     var score = 0;
 
      var visited = localStorage.getItem('visited');
      if (!visited) {
@@ -56,16 +56,15 @@ for(i=0;i<4;i++){
        ctx.fillText(random, dy, dx);
        $("#number").html(" ");
 
-          var  indexes = get_all(board,row,column)
-       console.log(indexes);
+          var  indexes = get_all(board,row,column);
        if (indexes != 0){
-
+         score =0;
          for (var i=0 ; i< 4;i++){
               clearTab(indexes[i][1],indexes[i][0]);
+              score += board[indexes[i][0]][indexes[i][1]];
               board[indexes[i][0]][indexes[i][1]]=0;
             }
-            total += (20 +Math.floor((Math.random() * 20) + 1));
-            console.log(total);
+            total += score;
             var s = "Score: "+total
             $("#score").html(s);
          }
