@@ -68,11 +68,12 @@ for(i=0;i<4;i++){
             var s = "Score: "+total
             $("#score").html(s);
          }
+         setTimeout(getRandomNumber, 500);
        }
        if (checkStatus()==false){
          if(!alert('Game Over, You Lost!')){window.location.reload();}
        }
-       setTimeout(getRandomNumber, 500);
+
 
 
    });
