@@ -1,0 +1,56 @@
+* { padding: 0; margin: 0; }
+
+#head {
+  height: 60px;
+  width :100%;
+  background-color: black;
+  margin-bottom: 30px;
+}
+
+h1{
+  float: left;
+  padding-top: 10px;
+  padding-left: 30px;
+  color: #FFFAFA;
+  font-family: monospace ;
+}
+
+h3{
+  float: left;
+  padding-top: 15px;
+  padding-left: 30px;
+  color: #FFFAFA;
+  font-family: monospace ;
+}
+h3{
+  text-decoration: none;
+  color: #FFFAFA;
+}
+
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  text-decoration: underline;
+}
+a:visited{
+  text-decoration: none;
+  color: #FFFAFA;
+}
+#tut{
+  clear: both;
+  margin-left: 30px;
+}
+#rules{
+  clear: both;
+font-family: monospace ;
+color: #191970;
+
+}
+ol{
+  margin-top: 80px;
+  margin-left: 100px;
+  font-family: monospace;
+  font-weight: bold;
+}
