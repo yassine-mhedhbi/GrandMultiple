@@ -45,7 +45,7 @@ for(i=0;i<4;i++){
 
 
 
-   $("#myCanvas").click(function(){
+   $("#myCanvas").click(function(event){
      getCursorPosition(myCanvas, event);
      getTab(x,y);
      getCord(row,column);
