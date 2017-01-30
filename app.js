@@ -44,7 +44,6 @@ for(i=0;i<4;i++){
     },1000);
 
 
-
    $("#myCanvas").click(function(event){
      getCursorPosition(myCanvas, event);
      getTab(x,y);
@@ -54,10 +53,9 @@ for(i=0;i<4;i++){
        ctx.fillStyle = "#191970";
        ctx.font = "bold 40px Arial";
        ctx.fillText(random, dy, dx);
-       setTimeout(function(){
+ 
        $("#number").html(" ");
-     },500);
-          var  indexes = get_all(board,row,column);
+       var  indexes = get_all(board,row,column);
 
        if (indexes != 0){
          score =0;
